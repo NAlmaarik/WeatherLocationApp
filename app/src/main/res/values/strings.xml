@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WeatherLocationApp</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_in_with_email">Sign in with email</string>
+    <string name="sign_in_with_google_account">Sign in with Google</string>
+    <string name="no_data_message">No places to show weather</string>
+    <string name="add_place">Add Place</string>
+    <string name="save">Save</string>
+    <string name="select_location">Please select location</string>
+    <string name="dropped_pin">Dropped Pin</string>
+    <string name="ok">Ok</string>
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete All</string>
+    <string name="log_out">LogOut</string>
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "492603135967",
+    "project_id": "weather-location-app-de122",
+    "storage_bucket": "weather-location-app-de122.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492603135967:android:64ce158878ba15e5d8166a",
+        "android_client_info": {
+          "package_name": "com.example.weatherlocationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492603135967-2dfoo292qq9554fgoi45mki73likgb2i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.weatherlocationapp",
+            "certificate_hash": "ecab734fe1367fb2ddce1a99a9cde968a80e1fb5"
+          }
+        },
+        {
+          "client_id": "492603135967-4vjh55vbbssru0ccot6m354okp18cj2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs1kYxHPMRn5OvDrFh6-9g3-jEbrnILfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492603135967-4vjh55vbbssru0ccot6m354okp18cj2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

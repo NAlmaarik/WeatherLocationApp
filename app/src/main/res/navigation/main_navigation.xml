@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.weatherlocationapp.authintication.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_weatherLocationsListFragment"
+            app:destination="@id/weatherLocationsListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/weatherLocationsListFragment"
+        android:name="com.example.weatherlocationapp.weatherLocationsList.WeatherLocationsListFragment"
+        android:label="fragment_weather_locations_list"
+        tools:layout="@layout/fragment_weather_locations_list" >
+        <action
+            android:id="@+id/action_weatherLocationsListFragment_to_selectLocationFragment"
+            app:destination="@id/selectLocationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_weatherLocationsListFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_weatherLocationsListFragment_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/selectLocationFragment"
+        android:name="com.example.weatherlocationapp.weatherLocationsList.selectPlaceLocation.SelectLocationFragment"
+        android:label="SelectLocationFragment" />
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.example.weatherlocationapp.weatherDetails.WeatherDetailsFragment"
+        android:label="fragment_weather_details"
+        tools:layout="@layout/fragment_weather_details">
+
+        <argument
+            android:name="selectedWeatherLocation"
+            app:argType="com.example.weatherlocationapp.local.WeatherLocationModel"/>
+
+    </fragment>
+</navigation>

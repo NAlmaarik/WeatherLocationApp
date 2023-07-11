@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".weatherDetails.WeatherDetailsFragment">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.weatherlocationapp.local.WeatherLocationModel" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/weather_details_scene">
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Riyadh"
+            android:text="@{item.cityName}"
+            style="@style/mainHeader"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="45"
+            android:text="@{String.valueOf(item.weatherTemperature)}"
+            style="@style/mainHeader"
+            android:layout_marginTop="@dimen/margin_top"
+            app:layout_constraintTop_toBottomOf="@id/city_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/main_weather_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rain"
+            style="@style/mainHeader"
+            android:text="@{item.weatherMain}"
+            android:layout_marginTop="@dimen/margin_top"
+            app:layout_constraintTop_toBottomOf="@id/temperature"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/details_weather_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="medium rain"
+            style="@style/mainHeader"
+            android:text="@{item.weatherDescription}"
+            android:layout_marginTop="@dimen/margin_top_medium"
+            app:layout_constraintTop_toBottomOf="@id/main_weather_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/weather_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setWeatherImage="@{item}"
+            tools:src="@drawable/ic_weather_status"
+            android:layout_margin="@dimen/margin_top_medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/city_name"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>
